@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unicor - Sistema de Encomiendas</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      padding: 50px 60px;
+      max-width: 700px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    .logo {
+      font-size: 3.5rem;
+      font-weight: 900;
+      letter-spacing: 4px;
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 8px;
+    }
+
+    .tagline {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: rgba(255,255,255,0.7);
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      color: #fff;
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+
+    .status {
+      margin-top: 40px;
+      padding: 14px 20px;
+      background: rgba(0, 255, 150, 0.08);
+      border: 1px solid rgba(0, 255, 150, 0.25);
+      border-radius: 10px;
+      font-size: 0.85rem;
+      color: #00ff96;
+    }
+
+    .dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: #00ff96;
+      border-radius: 50%;
+      margin-right: 8px;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.3; }
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">UNICOR</div>
+    <div class="tagline">Sistema de Encomiendas</div>
+
+    <h1>Bienvenido al portal de servicios</h1>
+    <p>
+      Gestiona envíos, clientes y rutas desde un solo lugar.<br />
+      Accede al panel de administración o consulta el estado del sistema.
+    </p>
+
+    <div class="links">
+      <a href="/app/admin/" class="btn btn-primary">Panel Django Admin</a>
+      <a href="http://localhost:5050" class="btn btn-secondary">pgAdmin</a>
+      <a href="/app/" class="btn btn-secondary">API Backend</a>
+    </div>
+
+    <div class="status">
+      <span class="dot"></span>
+      Todos los servicios operativos &mdash; Unicor v1.0
+    </div>
+
+    <footer>
+      Reemplaza los archivos en <code>unicor/html/</code> para actualizar esta página.
+    </footer>
+  </div>
+</body>
+</html>
