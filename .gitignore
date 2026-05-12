@@ -1,5 +1,6 @@
 # .gitignore
 .env
+docker-compose.yml
 venv/
 env/
 __pycache__/
